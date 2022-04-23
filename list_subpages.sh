@@ -1,6 +1,13 @@
 #!/bin/bash
 
-# Zim Custom Tool to generate a list of sub-pages (with links).
+# Zim Custom Tool by Bruno C. Vellutini
+# https://brunovellutini.com
+
+# Generate list of sub-pages with links
+
+# Requirements:
+#
+# - Bash
 
 # Install:
 #
@@ -21,11 +28,17 @@
 #
 # 1. Open a page that has sub-pages
 # 2. Put your cursor where you want your list
-# 3. Go to Tools > List Sub-Pages
+# 3. Go to Tools > List Sub-Pages (or press shortcut)
 # 4. An unformatted list will appear
 # 5. Reload the page to render the links (CTRL+R)
 #
 # Note: If there are no sub-pages, nothing will be printed.
+
+# TODO:
+#
+# - Option to use numbered lists
+# - Recursive sub-pages with indentation
+# - Option to reverse sort and sort by date
 
 # Get attachment directory of current page
 DIR=$1
@@ -40,8 +53,3 @@ for i in `ls ${DIR}/*.txt`; do
   echo "* [[+${subpage}|${subpage}]]"
 done
 
-# TODO:
-#
-# - Option to use numbered lists
-# - Recursive sub-pages with indentation
-# - Option to reverse sort and sort by date
