@@ -2,5 +2,4 @@
 
 My collection of custom tools for [Zim Desktop Wiki](https://zim-wiki.org/).
 
-- [zim_list_subpages.sh](zim_list_subpages.sh): Creates a list with links to
-  all sub-pages under your cursor.
+- [list_subpages.sh](list_subpages.sh): Makes a list with links to sub-pages.
