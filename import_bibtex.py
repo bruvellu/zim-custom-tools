@@ -28,7 +28,7 @@
 # 2. Go to Tools > Update References
 # 3. BibTeX entries will be converted to sub-pages
 #
-# Note: Zim may become unresponsible for a couple of minutes if the bibfile is large.
+# Note: Zim may become unresponsive for a couple of minutes if the bibfile is large.
 
 # TODO:
 #
