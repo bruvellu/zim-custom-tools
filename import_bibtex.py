@@ -71,14 +71,14 @@ bibdata = parse_file(bibfile)
 # Loop over entries in bibtex file
 for bibkey, values in bibdata.entries.items():
 
-    # Ignore references without author
+    # Skip references without author
     if bibkey.startswith('noauthor'):
         continue
 
-    # Define folder to store page
+    # Define page folder using first author letter
     folder = root / bibkey[0]
 
-    # Define filename
+    # Define filename using the bibkey
     filename = f'{bibkey}.txt'
 
     # Define filepath
@@ -95,8 +95,8 @@ for bibkey, values in bibdata.entries.items():
 
     # Get datetime now
     now = datetime.now()
-    isodate = now.isoformat()
-    subdate = datetime.now().strftime('%A %d %B %Y')
+    isodate = now.astimezone().replace(microsecond=0).isoformat()
+    subdate = now.strftime('%A %d %B %Y')
 
     # Save final content of the page
     page = template.format(bibkey=bibkey, entry=entry, isodate=isodate,
