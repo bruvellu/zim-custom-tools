@@ -81,7 +81,7 @@ for bibkey, entry in bibdata.entries.items():
     print(bibkey)
 
     # Define subfolder using the bibkey's first letter
-    subfolder = bibkey[0]
+    subfolder = bibkey.upper()[0]
 
     # Define path for subfolder
     subpath = root / subfolder
