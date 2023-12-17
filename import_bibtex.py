@@ -76,6 +76,8 @@ for bibkey, entry in bibdata.entries.items():
     # Skip references without author
     if bibkey.startswith('noauthor'):
         continue
+    if bibkey.startswith('UnknownUnknown'):
+        continue
 
     # Print bibkey to terminal
     print(bibkey)
@@ -137,8 +139,8 @@ for bibkey, entry in bibdata.entries.items():
         bibfields.move_to_end('editor', last=False)
     if 'author' in person_dict.keys():
         bibfields.move_to_end('author', last=False)
-    if 'title' in person_dict.keys():
-        bibfields.move_to_end('title', last=False)
+    # Move title to beginning
+    bibfields.move_to_end('title', last=False)
 
 
     # Print fields to page
