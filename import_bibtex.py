@@ -137,7 +137,8 @@ for bibkey, entry in bibdata.entries.items():
         bibfields.move_to_end('editor', last=False)
     if 'author' in person_dict.keys():
         bibfields.move_to_end('author', last=False)
-    bibfields.move_to_end('title', last=False)
+    if 'title' in person_dict.keys():
+        bibfields.move_to_end('title', last=False)
 
 
     # Print fields to page
